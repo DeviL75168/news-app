@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news/feature/news/presentation/widgets/news_card.dart';
 
 import '../data/news_model.dart';
 
@@ -20,11 +21,27 @@ final Articles? news;
           style: const TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold),),) ,
 
       body: ListView(
-        children: const [
+        children: [
+
+          NewsCard(news: news, fromNewsDetails: true,),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text('Content: ',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                  ],
+                ),
+                SizedBox(height: 16,),
+                Text(news?.content ??'',style: TextStyle(fontSize: 14.5,),),
+              ],
+            ),
+          ),
 
           Padding(
             padding: EdgeInsets.all(150.0),
-            child: Center(child: Text('News ',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,),)),
+            child: Center(child: Text('',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
           ) ,
         ],
       ),

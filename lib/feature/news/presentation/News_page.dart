@@ -55,7 +55,7 @@ class _NewsPageState extends State<NewsPage> {
                           
                         },
                         
-                          child: NewsCard(news : news));
+                          child: NewsCard(news : news, fromNewsDetails: false,));
                       // return Text('News Title :${snapshot.data?[index].title}');
 
                     }, separatorBuilder: (BuildContext context, int index) {
