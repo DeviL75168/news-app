@@ -50,7 +50,8 @@ class _NewsPageState extends State<NewsPage> {
                           
                         onTap:(){
                           
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => NewsDetails(news: news)
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => NewsDetails(news: news,
+                          newsList: snapshot.data,)
                           ));
                           
                         },

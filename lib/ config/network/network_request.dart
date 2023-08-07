@@ -13,8 +13,11 @@ class NetworkRequest{
 static final dio = Dio();
 
 static Future<List<Articles>?> getTopNews() async{
+
 final response = await dio.get(AppUrls.topNews);
+
 print("Server Response : ${response.statusCode}");
+
 //print("Server Response : ${response.data['articles']}");
 
 return NewsModel.fromJson(response.data).articles ?? [];

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/feature/news/presentation/all_news.dart';
+import 'package:news/feature/news/presentation/dl_login.dart';
 
 import 'feature/news/presentation/News_page.dart';
 
@@ -36,7 +37,11 @@ class MyApp extends StatelessWidget {
       ),
 debugShowCheckedModeBanner: false,
       //home: NewsPage(),
-      home: AllNews(),
+
+      routes: {
+        '/allNews': (context) => AllNews(),
+      },
+      home: devil(),
     );
   }
 }
