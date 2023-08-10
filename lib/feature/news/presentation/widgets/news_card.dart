@@ -75,7 +75,7 @@ class NewsCard extends StatelessWidget {
                   fontWeight: FontWeight.w600
               ),),
 
-              Text(DateTimeFormatted.convertDateTime(news?.publishedAt??'')),
+              //Text(DateTimeFormatted.convertDateTime(news?.publishedAt??'')),
             ],
           )
           // Image.network('${news?.urlToImage}')
